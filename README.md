@@ -8,7 +8,8 @@ A comprehensive Python tool for analyzing X (Twitter) followers and interactions
 - Creates detailed Excel reports about your followers
 - Tracks interaction history
 - Combines local data with current X API information
-- Handles rate limits automatically
+- Smart rate limit handling with caching support
+- Development mode for faster testing
 
 ## Prerequisites
 
@@ -47,6 +48,24 @@ ACCESS_TOKEN_SECRET = "your_access_token_secret"
 python XFollowMetrics.py
 ```
 
+### Development Mode
+
+For faster development and testing:
+```bash
+python XFollowMetrics.py --dev
+```
+This mode:
+- Uses cached API responses when available
+- Tests with a smaller sample size
+- Reduces wait times during development
+
+## Rate Limits
+
+The script handles X API rate limits automatically:
+- Waits during rate limit windows (typically 15 minutes)
+- Caches responses to minimize API calls
+- Shows progress during rate limit waiting periods
+
 ## Output
 
 The script generates an Excel report (`follower_report.xlsx`) containing:
@@ -62,7 +81,11 @@ The script generates an Excel report (`follower_report.xlsx`) containing:
 
 ## Note
 
-The script may take 1-2 hours to run for accounts with many followers due to X API rate limits.
+The script's runtime depends on:
+- Number of followers
+- X API rate limits
+- Cache availability
+- Development mode settings
 
 ## Mac Application
 

@@ -64,6 +64,20 @@ The script generates an Excel report (`follower_report.xlsx`) containing:
 
 The script may take 1-2 hours to run for accounts with many followers due to X API rate limits.
 
+## Mac Application
+
+For macOS users, you can run XFollowMetrics as a native application:
+
+1. Follow the instructions in `MAC_INSTALLATION.md` to create the app
+2. Double-click XFollowMetrics to run
+3. Click "Run Analysis" in the dialog
+
+The Mac app provides:
+- Easy double-click execution
+- User-friendly interface
+- Progress tracking in Terminal
+- Native macOS integration
+
 ## License
 
 MIT License - See LICENSE file for details
